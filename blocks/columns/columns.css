@@ -43,11 +43,12 @@
 }
 
 /* book-panel variant — icon + link quick actions row */
-.columns.book-panel > div > div {
+.columns.book-panel > div > div p {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  margin: 0;
 }
 
 .columns.book-panel .icon {
