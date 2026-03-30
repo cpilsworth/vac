@@ -45,8 +45,9 @@
 /* book-panel variant — icon + link quick actions row */
 .columns.book-panel > div > div {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .columns.book-panel .icon {
@@ -60,12 +61,12 @@
   height: 100%;
 }
 
-.columns.book-panel a:any-link:not(.button)::after {
-  content: ' \2192';
-}
-
 .columns.book-panel a:any-link:not(.button) {
   font-weight: 400;
   font-size: var(--body-font-size-s);
   white-space: nowrap;
+}
+
+.columns.book-panel a:any-link:not(.button)::after {
+  content: ' \2192';
 }
