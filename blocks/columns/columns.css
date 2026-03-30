@@ -32,20 +32,12 @@
   }
 }
 
-/* VAC columns heading styling */
-.columns h3 {
+/* VAC column text link styling */
+.columns a:any-link {
   color: var(--brand-red);
-  font-size: var(--heading-font-size-s);
-  margin-top: 0;
+  font-weight: 500;
 }
 
-.columns h4 {
-  color: var(--text-color);
-  font-size: var(--heading-font-size-xs);
-}
-
-.columns > div > div > p {
-  color: var(--dark-color);
-  font-size: var(--body-font-size-s);
-  line-height: 1.7;
+.columns a:any-link:hover {
+  color: var(--brand-red-dark);
 }
