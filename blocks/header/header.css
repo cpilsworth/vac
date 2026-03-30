@@ -78,14 +78,40 @@ header .global-nav-wrapper p {
   padding: 0 24px;
 }
 
+header .global-nav-wrapper ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0 32px;
+}
+
+header .global-nav-wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+header .global-nav-wrapper ul li:not(:last-child)::after {
+  content: '|';
+  color: rgba(255 255 255 / 60%);
+}
+
 header .global-nav-wrapper a:any-link {
   color: #fff;
   font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
 }
 
 header .global-nav-wrapper a:hover {
   color: rgba(255 255 255 / 80%);
   text-decoration: underline;
+  background: none;
 }
 
 /* hamburger */
