@@ -199,6 +199,12 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    // Mark the second content wrapper as nav-actions (bell icon, track cargo)
+    const wrappers = navSections.querySelectorAll(':scope > .default-content-wrapper');
+    if (wrappers.length > 1) {
+      wrappers[1].classList.add('nav-actions');
+    }
+
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {

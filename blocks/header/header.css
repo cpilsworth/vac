@@ -243,7 +243,8 @@ header nav .nav-sections ul > li > ul > li {
 
 @media (width >= 900px) {
   header nav .nav-sections {
-    display: block;
+    display: flex;
+    align-items: center;
     visibility: visible;
     white-space: nowrap;
   }
@@ -324,6 +325,41 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 8px 0;
   }
+}
+
+/* nav actions (bell icon, track cargo) */
+header nav .nav-sections .nav-actions {
+  margin-left: auto;
+}
+
+header nav .nav-sections .nav-actions > ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header nav .nav-sections .nav-actions .icon {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+header nav .nav-sections .nav-actions a:any-link {
+  color: #fff;
+  background-color: var(--brand-red);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+header nav .nav-sections .nav-actions a:hover {
+  background-color: var(--brand-red-dark);
+  text-decoration: none;
 }
 
 /* tools */
