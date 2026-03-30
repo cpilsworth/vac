@@ -9,6 +9,7 @@
 
 .cards > ul > li {
   border: 1px solid var(--neutral-200, #e8e8e8);
+  border-radius: 0;
   background-color: var(--background-color);
 }
 
@@ -20,12 +21,21 @@
   margin-top: 0;
 }
 
+/* card title — strong text styled as purple link-like heading */
+.cards .cards-card-body strong {
+  color: var(--brand-purple);
+  font-weight: 500;
+  font-size: var(--body-font-size-s);
+}
+
+/* date line */
 .cards .cards-card-body em {
   color: var(--dark-color);
   font-size: var(--body-font-size-xs);
   font-style: normal;
 }
 
+/* plain text links (non-button) */
 .cards .cards-card-body a:any-link:not(.button) {
   color: var(--brand-red);
   font-weight: 500;
@@ -33,6 +43,31 @@
 
 .cards .cards-card-body a:any-link:not(.button):hover {
   color: var(--brand-red-dark);
+}
+
+/* override EDS auto-button decoration — render as text link in cards */
+.cards .cards-card-body .button-container {
+  margin: 0;
+  padding: 0;
+}
+
+.cards .cards-card-body a.button:any-link {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--brand-red);
+  font-weight: 500;
+  font-size: var(--body-font-size-xs);
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cards .cards-card-body a.button:any-link:hover {
+  background-color: transparent;
+  color: var(--brand-red-dark);
+  text-decoration: underline;
 }
 
 .cards .cards-card-image {
