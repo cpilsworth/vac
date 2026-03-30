@@ -79,8 +79,26 @@
   object-fit: cover;
 }
 
+/* news variant — dividing lines between cards instead of full borders */
+.cards.news > ul > li {
+  border: none;
+}
+
 @media (width >= 900px) {
   .cards > ul {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards.news > ul {
+    grid-gap: 0;
+  }
+
+  .cards.news > ul > li {
+    border-right: 1px solid var(--neutral-200, #e8e8e8);
+    padding: 0 24px;
+  }
+
+  .cards.news > ul > li:last-child {
+    border-right: none;
   }
 }
