@@ -48,9 +48,17 @@ footer .footer a:hover {
   text-decoration: underline;
 }
 
-/* 4-column link layout using CSS columns */
+/* footer link columns — each h3 starts a new column */
 footer .footer > div:first-child .default-content-wrapper {
   columns: 1;
+}
+
+footer .footer > div:first-child .default-content-wrapper h3 {
+  break-before: column;
+}
+
+footer .footer > div:first-child .default-content-wrapper h3:first-child {
+  break-before: avoid;
 }
 
 footer .footer > div:first-child .default-content-wrapper h3,
