@@ -23,8 +23,7 @@ footer .footer p {
 footer .footer ul {
   list-style: none;
   padding: 0;
-  margin: 4px 0 0;
-  columns: 1;
+  margin: 4px 0 16px;
 }
 
 footer .footer ul li {
