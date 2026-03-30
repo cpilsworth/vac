@@ -30,8 +30,8 @@
   --neutral-900: #1a1a1a;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: gotham, gotham-fallback, arial, sans-serif;
+  --heading-font-family: gotham-heading, gotham-heading-fallback, arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -55,14 +55,14 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: gotham-heading-fallback;
+  size-adjust: 95%;
   src: local('Arial');
 }
 
 @font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: gotham-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
@@ -89,6 +89,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
+  font-weight: 300;
   font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
