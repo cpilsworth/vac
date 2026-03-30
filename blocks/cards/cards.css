@@ -8,12 +8,47 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid var(--neutral-200, #e8e8e8);
   background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.cards > ul > li:hover {
+  box-shadow: 0 8px 24px rgba(0 0 0 / 12%);
+  transform: translateY(-2px);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 16px 20px 20px;
+}
+
+.cards .cards-card-body > p:first-child {
+  margin-top: 0;
+}
+
+.cards .cards-card-body strong {
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+}
+
+.cards .cards-card-body em {
+  color: var(--dark-color);
+  font-size: var(--body-font-size-xs);
+  font-style: normal;
+}
+
+.cards .cards-card-body a:any-link {
+  color: var(--brand-red);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.3px;
+}
+
+.cards .cards-card-body a:any-link:hover {
+  color: var(--brand-red-dark);
 }
 
 .cards .cards-card-image {
@@ -24,4 +59,53 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* Quick actions variant - icon cards with centered content */
+.cards.quick-actions > ul {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cards.quick-actions > ul > li {
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.cards.quick-actions > ul > li:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.cards.quick-actions .cards-card-image img {
+  width: 64px;
+  height: 64px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.cards.quick-actions .cards-card-body strong {
+  font-size: var(--body-font-size-s);
+  color: var(--brand-red);
+}
+
+/* News variant - horizontal cards */
+@media (width >= 900px) {
+  .cards.news > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards.news > ul > li {
+  border-left: 3px solid var(--brand-red);
+}
+
+.cards.news .cards-card-body em {
+  display: block;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--neutral-200);
 }

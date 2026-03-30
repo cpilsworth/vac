@@ -11,13 +11,23 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* colors - Virgin Atlantic Cargo brand */
+  --background-color: #fff;
+  --light-color: #f5f5f5;
+  --dark-color: #58595b;
+  --text-color: #2d2d2d;
+  --link-color: #e31e23;
+  --link-hover-color: #b8191d;
+  --brand-red: #e31e23;
+  --brand-red-dark: #b8191d;
+  --brand-dark: #1a1a2e;
+  --brand-purple: #4a0e4e;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e8e8e8;
+  --neutral-300: #dadada;
+  --neutral-700: #58595b;
+  --neutral-800: #3a3a3a;
+  --neutral-900: #1a1a1a;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -163,13 +173,14 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--brand-red);
   text-decoration: none;
   word-break: break-word;
+  transition: color 0.2s;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: var(--brand-red-dark);
   text-decoration: underline;
 }
 
@@ -181,40 +192,52 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  padding: 0.6em 1.5em;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
+  font-size: var(--body-font-size-s);
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--brand-red);
+  color: #fff;
   cursor: pointer;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--brand-red-dark);
   cursor: pointer;
+  transform: translateY(-1px);
 }
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
+  background-color: var(--neutral-300);
   cursor: unset;
+  transform: none;
 }
 
 a.button.secondary,
 button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  border: 2px solid var(--brand-red);
+  color: var(--brand-red);
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--brand-red);
+  color: #fff;
 }
 
 main img {
@@ -258,7 +281,33 @@ main > .section:first-of-type {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: var(--neutral-100);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.dark {
+  background-color: var(--brand-dark);
+  color: #fff;
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4 {
+  color: #fff;
+}
+
+main .section.dark a:any-link {
+  color: #fff;
+}
+
+main .section.dark a.button:any-link {
+  background-color: #fff;
+  color: var(--brand-red);
+}
+
+main .section.dark a.button:hover {
+  background-color: var(--neutral-200);
 }

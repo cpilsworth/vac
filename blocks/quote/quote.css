@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 0 24px;
   max-width: 900px;
+  border-left: 4px solid var(--brand-red);
 }
 
 @media (width >= 900px) {
@@ -12,6 +13,7 @@
 
 .quote blockquote .quote-quotation {
   font-size: 120%;
+  color: var(--text-color);
 }
 
 .quote blockquote .quote-quotation > :first-child {
@@ -21,21 +23,25 @@
 .quote blockquote .quote-quotation > :first-child::before,
 .quote blockquote .quote-quotation > :last-child::after {
   line-height: 0;
+  color: var(--brand-red);
+  font-size: 150%;
 }
 
 .quote blockquote .quote-quotation > :first-child::before {
-  content: "“";
+  content: "\201C";
 }
 
 .quote blockquote .quote-quotation > :last-child::after {
-  content: "”";
+  content: "\201D";
 }
 
 .quote blockquote .quote-attribution {
   text-align: right;
+  color: var(--dark-color);
+  font-weight: 500;
 }
 
 .quote blockquote .quote-attribution > :first-child::before {
-  content: "—";
+  content: "\2014";
   padding-right: 0.5ch;
 }

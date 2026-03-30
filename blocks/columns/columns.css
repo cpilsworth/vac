@@ -21,13 +21,53 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: unset;
-    gap: 24px;
+    gap: 32px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+/* VAC product/service columns styling */
+.columns > div > div h3 {
+  color: var(--brand-red);
+  font-size: var(--heading-font-size-s);
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--brand-red);
+}
+
+.columns > div > div h4 {
+  color: var(--text-color);
+  font-size: var(--heading-font-size-xs);
+}
+
+.columns > div > div p {
+  color: var(--dark-color);
+  font-size: var(--body-font-size-s);
+  line-height: 1.7;
+}
+
+.columns > div > div a.button {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* Bordered variant for service columns */
+@media (width >= 900px) {
+  .columns > div > div {
+    padding: 24px;
+    border: 1px solid var(--neutral-200);
+    border-radius: 8px;
+    background: var(--background-color);
+    transition: box-shadow 0.3s;
+  }
+
+  .columns > div > div:hover {
+    box-shadow: 0 4px 16px rgba(0 0 0 / 8%);
   }
 }

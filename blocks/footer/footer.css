@@ -1,5 +1,6 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--brand-dark, #1a1a2e);
+  color: rgba(255 255 255 / 80%);
   font-size: var(--body-font-size-xs);
 }
 
@@ -11,6 +12,16 @@ footer .footer > div {
 
 footer .footer p {
   margin: 0;
+}
+
+footer .footer a:any-link {
+  color: rgba(255 255 255 / 80%);
+  transition: color 0.2s;
+}
+
+footer .footer a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 @media (width >= 900px) {
