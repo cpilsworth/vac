@@ -22,6 +22,7 @@
   --brand-red-dark: #b8191d;
   --brand-dark: #1a1a2e;
   --brand-purple: #4a0e4e;
+  --heading-color: var(--brand-purple);
   --neutral-100: #f5f5f5;
   --neutral-200: #e8e8e8;
   --neutral-300: #dadada;
@@ -127,6 +128,7 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
+  color: var(--heading-color);
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
