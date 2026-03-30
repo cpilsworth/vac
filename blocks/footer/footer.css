@@ -48,11 +48,6 @@ footer .footer a:hover {
   text-decoration: underline;
 }
 
-/* footer link columns — each h3 starts a new column */
-footer .footer > div:first-child .default-content-wrapper {
-  columns: 1;
-}
-
 footer .footer > div:first-child .default-content-wrapper h3 {
   break-before: column;
 }
