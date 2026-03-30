@@ -332,20 +332,22 @@ header nav .nav-sections ul > li > ul > li {
   }
 }
 
-/* nav actions (bell icon, track cargo) */
-header nav .nav-sections .nav-actions {
-  margin-left: auto;
-  flex-shrink: 0;
+/* tools (bell icon, track cargo) */
+header nav .nav-tools {
+  grid-area: tools;
 }
 
-header nav .nav-sections .nav-actions > ul {
+/* stylelint-disable-next-line no-descending-specificity */
+header nav .nav-tools ul {
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 16px;
   margin: 0;
+  padding: 0;
 }
 
-header nav .nav-sections .nav-actions .icon {
+header nav .nav-tools .icon {
   display: flex;
   align-items: center;
   width: 20px;
@@ -353,7 +355,7 @@ header nav .nav-sections .nav-actions .icon {
   cursor: pointer;
 }
 
-header nav .nav-sections .nav-actions > ul > li > a:any-link {
+header nav .nav-tools ul > li > a:any-link {
   color: #fff;
   background-color: var(--brand-red);
   border-radius: 4px;
@@ -363,25 +365,14 @@ header nav .nav-sections .nav-actions > ul > li > a:any-link {
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
+  margin: 0;
+  border: none;
 }
 
-header nav .nav-sections .nav-actions > ul > li > a:hover {
+header nav .nav-tools ul > li > a:hover {
   background-color: var(--brand-red-dark);
   color: #fff;
   text-decoration: none;
-}
-
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
-}
-
-header nav .nav-tools .button {
-  margin: 0;
-  border: none;
-  padding: 0.5em;
-  background: none;
-  line-height: 0;
 }
 
 /* breadcrumbs */
