@@ -46,6 +46,11 @@ header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
   }
+
+  header .global-nav-wrapper > div {
+    max-width: 1264px;
+    padding: 0 32px;
+  }
 }
 
 header nav p {
@@ -69,13 +74,22 @@ header .global-nav-wrapper {
   height: var(--global-nav-height);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: var(--body-font-size-xs);
+}
+
+header .global-nav-wrapper > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 header .global-nav-wrapper p {
   margin: 0;
-  padding: 0 24px;
 }
 
 header .global-nav-wrapper ul {
@@ -84,7 +98,7 @@ header .global-nav-wrapper ul {
   align-items: center;
   gap: 8px;
   margin: 0;
-  padding: 0 32px;
+  padding: 0;
 }
 
 header .global-nav-wrapper ul li {
