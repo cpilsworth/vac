@@ -61,6 +61,8 @@ function autolinkModals(doc) {
  */
 function buildAutoBlocks(main) {
   try {
+    const template = getMetadata('template');
+    if (template === 'homepage') return;
     if (!main.querySelector('.hero')) buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
