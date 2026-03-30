@@ -8,12 +8,31 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid var(--neutral-200, #e8e8e8);
   background-color: var(--background-color);
 }
 
 .cards .cards-card-body {
   margin: 16px;
+}
+
+.cards .cards-card-body > p:first-child {
+  margin-top: 0;
+}
+
+.cards .cards-card-body em {
+  color: var(--dark-color);
+  font-size: var(--body-font-size-xs);
+  font-style: normal;
+}
+
+.cards .cards-card-body a:any-link:not(.button) {
+  color: var(--brand-red);
+  font-weight: 500;
+}
+
+.cards .cards-card-body a:any-link:not(.button):hover {
+  color: var(--brand-red-dark);
 }
 
 .cards .cards-card-image {
@@ -22,6 +41,5 @@
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
 }

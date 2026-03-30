@@ -21,7 +21,7 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: unset;
     gap: 24px;
   }
@@ -30,4 +30,14 @@
     flex: 1;
     order: unset;
   }
+}
+
+/* VAC column text link styling — exclude buttons */
+.columns a:any-link:not(.button) {
+  color: var(--brand-red);
+  font-weight: 500;
+}
+
+.columns a:any-link:not(.button):hover {
+  color: var(--brand-red-dark);
 }

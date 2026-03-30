@@ -17,6 +17,8 @@ import {
   toCamelCase,
 } from './aem.js';
 
+export const NX_ORIGIN = 'https://content.da.live';
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -61,6 +63,8 @@ function autolinkModals(doc) {
  */
 function buildAutoBlocks(main) {
   try {
+    const template = getMetadata('template');
+    if (template === 'homepage') return;
     if (!main.querySelector('.hero')) buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
