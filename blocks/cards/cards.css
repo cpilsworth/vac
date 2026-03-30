@@ -26,12 +26,12 @@
   font-style: normal;
 }
 
-.cards .cards-card-body a:any-link {
+.cards .cards-card-body a:any-link:not(.button) {
   color: var(--brand-red);
   font-weight: 500;
 }
 
-.cards .cards-card-body a:any-link:hover {
+.cards .cards-card-body a:any-link:not(.button):hover {
   color: var(--brand-red-dark);
 }
 

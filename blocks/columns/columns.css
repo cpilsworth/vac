@@ -32,12 +32,12 @@
   }
 }
 
-/* VAC column text link styling */
-.columns a:any-link {
+/* VAC column text link styling — exclude buttons */
+.columns a:any-link:not(.button) {
   color: var(--brand-red);
   font-weight: 500;
 }
 
-.columns a:any-link:hover {
+.columns a:any-link:not(.button):hover {
   color: var(--brand-red-dark);
 }
