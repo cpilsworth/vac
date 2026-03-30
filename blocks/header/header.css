@@ -1,11 +1,12 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--brand-dark, #1a1a2e);
-  color: #fff;
+  background-color: #fff;
+  color: var(--text-color);
   width: 100%;
   z-index: 2;
   position: fixed;
-  box-shadow: 0 2px 8px rgba(0 0 0 / 15%);
+  top: var(--global-nav-height);
+  box-shadow: 0 2px 8px rgba(0 0 0 / 10%);
 }
 
 header nav {
@@ -55,6 +56,36 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+}
+
+/* global nav bar (Register / Login) */
+header .global-nav-wrapper {
+  background-color: var(--brand-red);
+  color: #fff;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  height: var(--global-nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: var(--body-font-size-xs);
+}
+
+header .global-nav-wrapper p {
+  margin: 0;
+  padding: 0 24px;
+}
+
+header .global-nav-wrapper a:any-link {
+  color: #fff;
+  font-weight: 500;
+}
+
+header .global-nav-wrapper a:hover {
+  color: rgba(255 255 255 / 80%);
+  text-decoration: underline;
 }
 
 /* hamburger */
@@ -245,10 +276,11 @@ header nav .nav-sections ul > li > ul > li {
     width: 200px;
     top: 150%;
     padding: 16px;
-    background-color: var(--brand-dark, #1a1a2e);
+    background-color: #fff;
     white-space: initial;
     z-index: 1;
     border-top: 2px solid var(--brand-red);
+    box-shadow: 0 4px 12px rgba(0 0 0 / 10%);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {

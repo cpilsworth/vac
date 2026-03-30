@@ -47,9 +47,10 @@
   --heading-font-size-xs: 22px;
 
   /* nav heights */
+  --global-nav-height: 36px;
   --nav-height: 64px;
   --breadcrumbs-height: 34px;
-  --header-height: var(--nav-height);
+  --header-height: calc(var(--global-nav-height) + var(--nav-height));
 }
 
 /* fallback fonts */

@@ -184,7 +184,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['global-nav', 'brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -231,6 +231,15 @@ export default async function decorate(block) {
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+  // extract global nav bar (Register / Login) above main nav
+  const globalNav = nav.querySelector('.nav-global-nav');
+  if (globalNav) {
+    const globalNavWrapper = document.createElement('div');
+    globalNavWrapper.className = 'global-nav-wrapper';
+    globalNavWrapper.append(globalNav);
+    block.append(globalNavWrapper);
+  }
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
