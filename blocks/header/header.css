@@ -233,6 +233,10 @@ header nav .nav-sections ul > li {
   font-weight: 500;
 }
 
+header nav .nav-sections a:any-link {
+  color: var(--heading-color);
+}
+
 header nav .nav-sections ul > li > ul {
   margin-top: 0;
 }
