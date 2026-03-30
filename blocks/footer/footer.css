@@ -1,13 +1,19 @@
 footer {
-  background-color: var(--neutral-100, #f5f5f5);
+  background-color: #fff;
   color: var(--text-color);
   font-size: var(--body-font-size-xs);
+  margin-top: 60px;
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
+}
+
+footer .footer > div:first-child {
+  background-color: var(--neutral-100, #f5f5f5);
+  border-radius: 4px;
 }
 
 footer .footer p {
@@ -54,7 +60,6 @@ footer .footer > div:first-child .default-content-wrapper ul {
 
 /* copyright bar */
 footer .footer > div:last-child {
-  border-top: 1px solid var(--neutral-300);
   padding-top: 16px;
   color: var(--neutral-700);
   font-size: var(--body-font-size-xs);
