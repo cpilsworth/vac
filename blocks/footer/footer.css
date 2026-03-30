@@ -24,6 +24,7 @@ footer .footer ul {
   list-style: none;
   padding: 0;
   margin: 4px 0 0;
+  columns: 1;
 }
 
 footer .footer ul li {
