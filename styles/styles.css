@@ -201,14 +201,12 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   background-color: var(--brand-red);
   color: #fff;
   cursor: pointer;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition: background-color 0.2s, transform 0.1s;
+  transition: background-color 0.2s;
 }
 
 a.button:hover,
@@ -217,14 +215,12 @@ button:hover,
 button:focus {
   background-color: var(--brand-red-dark);
   cursor: pointer;
-  transform: translateY(-1px);
 }
 
 button:disabled,
 button:disabled:hover {
   background-color: var(--neutral-300);
   cursor: unset;
-  transform: none;
 }
 
 a.button.secondary,
