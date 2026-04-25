@@ -311,3 +311,138 @@ main .section.dark a.button:any-link {
 main .section.dark a.button:hover {
   background-color: var(--neutral-200);
 }
+
+/* ==========================================================================
+   Our Story page  default-content refinements
+   Only CSS additions; existing rules are untouched.
+   ========================================================================== */
+
+/* --- A. Hide 1×1 spacer / separator GIF images ---
+   The Our Story page uses transparent 1×1 GIFs as visual separators between
+   content groups. These render as tiny dots and should be completely hidden.
+   Both the <img> and its containing <p> are hidden to avoid empty spacing. */
+main .default-content-wrapper p > picture > img[width="1"][height="1"],
+main .default-content-wrapper p:has(> picture > img[width="1"][height="1"]) {
+  display: none;
+}
+
+/* --- B. Full-width content images ---
+   Content images (not 1×1 spacers) are constrained to their native pixel
+   dimensions and left-aligned. Make them expand to fill the container width
+   with rounded corners for a polished look.
+   Square images (1:1 ratio) are capped at a sensible height so they don't
+   dominate the viewport. */
+main .default-content-wrapper p > picture:only-child {
+  display: block;
+}
+
+main .default-content-wrapper p > picture:only-child img:not([width="1"]) {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (width >= 900px) {
+  /* Elevated treatment for content images on desktop */
+  main .default-content-wrapper p > picture:only-child img:not([width="1"]) {
+    max-height: 560px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgb(0 0 0 / 8%);
+  }
+}
+
+/* --- C. Button containers  breathing room ---
+   CTA buttons sit awkwardly between text and images. Give them more vertical
+   spacing to create clear visual separation. */
+main .default-content-wrapper .button-container {
+  margin-top: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+/* --- D. Linked images  card-like hover treatment ---
+   Linked card patterns (p > a > picture followed by h3 > a and p > a) lack
+   any card treatment. Add overflow clipping, rounded corners, and a subtle
+   zoom-on-hover to signal interactivity. Constrain height for square images. */
+main .default-content-wrapper p > a > picture {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+main .default-content-wrapper p > a > picture img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+main .default-content-wrapper p > a:hover > picture img {
+  transform: scale(1.03);
+}
+
+/* --- E. Lead-in bold text treatment ---
+   Bold text (e.g. in the closing section) gets a slight size bump for
+   visual weight and hierarchy. */
+main .default-content-wrapper p > strong:first-child {
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+
+/* --- F. Section spacing  H3 as group separators ---
+   H3 headings, text, CTAs and images all flow as flat default content with
+   no rhythm. Use h3 elements as visual group markers with a subtle top
+   border and generous spacing to create content rhythm. */
+main .default-content-wrapper h3 {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid var(--neutral-200);
+}
+
+/* First h3 right after the intro block shouldn't have the top border
+   (it's the start of the main content, not a separator) */
+main .default-content-wrapper h2 + p + p + p + h3,
+main .default-content-wrapper h2 + p + p + h3 {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* --- G. Closing section treatment ---
+   The final H2 ("We're always ready to listen") needs visual separation
+   from the product content above. Give it a distinct top border and
+   additional spacing to mark the transition. */
+main .default-content-wrapper h2:last-of-type {
+  margin-top: 3em;
+  padding-top: 2.5em;
+  border-top: 2px solid var(--brand-red);
+}
+
+/* --- H. Long button-link text (full paragraph wrapped in an <a>) ---
+   Some patterns have an entire paragraph of text wrapped in a link that
+   gets decorated as a button. Override to render as a normal link instead
+   of an overflowing red pill. */
+main .default-content-wrapper .button-container > a.button {
+  white-space: normal;
+  text-align: left;
+}
+
+/* Linked paragraphs that follow h3 > a links (card description text) 
+   style as descriptive text, not as buttons */
+main .default-content-wrapper h3 + p > a.button:only-child {
+  background: none;
+  color: var(--text-color);
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: var(--body-font-size-m);
+  white-space: normal;
+  text-align: left;
+  cursor: pointer;
+}
+
+main .default-content-wrapper h3 + p > a.button:only-child:hover {
+  background: none;
+  color: var(--brand-red);
+  text-decoration: underline;
+}
