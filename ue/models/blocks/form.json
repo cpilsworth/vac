@@ -1,0 +1,56 @@
+{
+  "definitions": [
+    {
+      "title": "Form",
+      "id": "form",
+      "model": "form",
+      "plugins": {
+        "da": {
+          "name": "form",
+          "rows": 1,
+          "columns": 1,
+          "fields": [
+            { "name": "formUrlText", "selector": "div>div>p:first-child>a" },
+            { "name": "formUrl", "selector": "div>div>p:first-child>a[href]" },
+            { "name": "submitUrlText", "selector": "div>div>p:last-child>a" },
+            { "name": "submitUrl", "selector": "div>div>p:last-child>a[href]" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "form",
+      "fields": [
+        {
+          "component": "text",
+          "name": "formUrlText",
+          "label": "Form URL Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "formUrl",
+          "label": "Form URL (.json)",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "submitUrlText",
+          "label": "Submit URL Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "submitUrl",
+          "label": "Submit URL",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

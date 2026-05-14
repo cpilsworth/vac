@@ -145,6 +145,61 @@
     ]
   },
   {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "name": "embedUrlText",
+        "label": "Embed URL Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "embedUrl",
+        "label": "Embed URL",
+        "required": true
+      },
+      {
+        "component": "reference",
+        "name": "placeholderImage",
+        "label": "Placeholder Image",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "formUrlText",
+        "label": "Form URL Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "formUrl",
+        "label": "Form URL (.json)",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "submitUrlText",
+        "label": "Submit URL Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitUrl",
+        "label": "Submit URL",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {

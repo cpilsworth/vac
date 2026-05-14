@@ -207,6 +207,62 @@
           }
         },
         {
+          "title": "Embed",
+          "id": "embed",
+          "model": "embed",
+          "plugins": {
+            "da": {
+              "name": "embed",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "embedUrlText",
+                  "selector": "div>div>p>a"
+                },
+                {
+                  "name": "embedUrl",
+                  "selector": "div>div>p>a[href]"
+                },
+                {
+                  "name": "placeholderImage",
+                  "selector": "div>div>picture>img[src]"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Form",
+          "id": "form",
+          "model": "form",
+          "plugins": {
+            "da": {
+              "name": "form",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "formUrlText",
+                  "selector": "div>div>p:first-child>a"
+                },
+                {
+                  "name": "formUrl",
+                  "selector": "div>div>p:first-child>a[href]"
+                },
+                {
+                  "name": "submitUrlText",
+                  "selector": "div>div>p:last-child>a"
+                },
+                {
+                  "name": "submitUrl",
+                  "selector": "div>div>p:last-child>a[href]"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Fragment",
           "id": "fragment",
           "model": "fragment",
