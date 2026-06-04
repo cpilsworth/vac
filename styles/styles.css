@@ -18,7 +18,7 @@
   --text-color: #2d2d2d;
   --link-color: #e31e23;
   --link-hover-color: #b8191d;
-  --brand-red: #e31e23;
+  --brand-red: #8816ca;
   --brand-red-dark: #b8191d;
   --brand-dark: #1a1a2e;
   --brand-purple: #4a0e4e;
@@ -319,8 +319,8 @@ main .section.dark a.button:hover {
    stylelint no-descending-specificity relative to .section.dark rules above.
    ========================================================================== */
 
-/* --- A. Hide 1×1 spacer / separator GIF images ---
-   Some pages use transparent 1×1 GIFs as visual separators between content
+/* --- A. Hide 1Ã—1 spacer / separator GIF images ---
+   Some pages use transparent 1Ã—1 GIFs as visual separators between content
    groups. These render as tiny dots and should be completely hidden.
    Both the <img> and its containing <p> are hidden to avoid empty spacing. */
 main .section .default-content-wrapper p > picture > img[width="1"][height="1"],
@@ -329,7 +329,7 @@ main .section .default-content-wrapper p:has(> picture > img[width="1"][height="
 }
 
 /* --- B. Full-width content images ---
-   Content images (not 1×1 spacers) are constrained to their native pixel
+   Content images (not 1Ã—1 spacers) are constrained to their native pixel
    dimensions and left-aligned. Make them expand to fill the container width
    with rounded corners for a polished look.
    Square images (1:1 ratio) are capped at a sensible height so they don't
